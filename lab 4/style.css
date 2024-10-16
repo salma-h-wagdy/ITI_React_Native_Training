@@ -1,0 +1,33 @@
+body {
+  font-family: "Georgia", serif;
+  margin: 0;
+  padding: 20px;
+  color: #333300;
+  background-color: #edffed;
+}
+
+h1 {
+  text-align: center;
+  
+}
+h2{
+  text-align: center;
+  
+}
+h3 {
+  text-align: center;
+  
+}
+p {
+  text-align: center;
+  margin: 0;
+}
+.image {
+    text-align: center;
+    margin: 100px;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }

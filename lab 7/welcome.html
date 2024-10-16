@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>User Info</title>
+    <link rel="stylesheet" type="text/css" media="screen" href='style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cookies.js"></script>
+</head>
+
+<body onload="initializePage()">
+    <div id="greeting"></div>
+
+    <script>
+        function initializePage() {
+            // console.log(document.cookie);
+            const userName = getCookie('userName');
+            const gender = getCookie('gender');
+            const favColor = getCookie('favColor');
+            
+
+            let visits = parseInt(getCookie('visits')) || 0;
+            visits++;
+            // createCookie('visits', visits, 30);
+            createCookie('visits', visits);
+            let imageSrc = gender === 'male' ? 'images/1 .jpg' : 'images/2 .jpg';
+
+            if (userName) {
+                document.getElementById('greeting').innerHTML = `
+                    <h2>Welcome <span style="color: ${favColor};">${userName}</span>, you have visited this site <span style="color: ${favColor};">${visits}</span> times :)</h2>
+                    <img src="${imageSrc}" width="150">
+                `;
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>

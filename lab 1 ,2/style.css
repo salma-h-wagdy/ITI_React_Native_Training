@@ -1,0 +1,87 @@
+body {
+  font-family: Cursive, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: black;
+  background-color: #F0E6D2;
+}
+.block {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  text-align: center;
+  
+}
+h2{
+  text-align: center;
+  
+}
+h3 {
+  text-align: center;
+  
+}
+p {
+  text-align: center;
+  margin: 0;
+}
+.image {
+    text-align: center;
+    margin: 100px;
+}
+.email-image {
+    text-align: center;  /* Ensures that the image is treated as a block element */
+    max-width: 100%; /* Ensures the image is responsive */
+    height: 30px;    /* Maintains the aspect ratio */
+    border: none;    /* Optional: Remove any default border around the image */
+    cursor: pointer; /* Change cursor to indicate the image is clickable */
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"],
+form select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.registration-form {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #f5a9a9;
+  border: 2px solid #d9534f;
+  
+}
+
+table {
+  width: 100%;
+}
+.select-wrapper {
+  display: flex;
+  justify-content: flex-end; 
+  
+}
+
+button {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container {
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

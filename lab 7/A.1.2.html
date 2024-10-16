@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab 7</title>
+    <link rel="stylesheet" type="text/css" media="screen" href='style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="cookies.js"></script>
+</head>
+
+<body >
+    <div>
+        <form>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="un" name="name"><br><br>
+
+            <label for="age">Enter your age:</label>
+            <input type="number" id="age" name="age"><br><br>
+
+            <label>Select your Gender:</label><br>
+            <div class="container" >
+                <div class="gender" >
+                    <img id="Image" src="images/1 .jpg" width="500" height="300">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                    
+                </div>
+                <div class="gender">
+                    <img id="Image" src="images/2 .jpg" width="500" height="300">
+                   
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </div>
+                </div> <br><br>
+
+                <label for="color">Select your favorite color:</label>
+                <input type="color" id="favColor" name="color"><br><br>
+
+                <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+
+    
+    <script>
+        function registerUser() {
+            const userName = document.getElementById('un').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const favColor = document.getElementById('favColor').value;
+
+            createCookie('userName', userName, 30);
+            createCookie('gender', gender, 30);
+            createCookie('favColor', favColor, 30);
+            deleteCookie('visits');
+            
+
+            window.open('welcome.html');
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

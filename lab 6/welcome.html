@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Lab 5</title>
+        <link rel="stylesheet" type="text/css" media="screen" href='style.css'/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+           
+            var query = location.search.replace("?", "");
+            var params = query.split("&");
+            var userInfo = {};
+            for (var i = 0; i < params.length; i++) {
+                var keyVal = params[i].split("=");
+                userInfo[keyVal[0]] = decodeURIComponent(keyVal[1]);
+            }
+        
+            document.write(`<h1>Welcome, ${userInfo['name']}!</h1>`);
+            document.write(`<p>Age: ${userInfo['age']}</p>`);
+            document.write(`<p>Phone: ${userInfo['phone']}</p>`);
+            document.write(`<p>Email: ${userInfo['email']}</p>`);
+            document.write(`<p>Address: ${userInfo['address']}</p>`);
+       </script>
+        
+    </body>
+</html>
